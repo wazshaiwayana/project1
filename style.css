@@ -1,0 +1,17 @@
+header {
+    background-color: orange;
+    color: white;
+    text-align: center;   
+    padding: 30px;
+    margin: 0;
+}
+
+h2 {text-align : center;
+    border: 20px;
+
+}
+
+p{
+    text-align: center;
+}
+
