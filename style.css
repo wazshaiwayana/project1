@@ -44,3 +44,13 @@ footer{
     margin-left: auto;
     
 }
+
+h5:hover span {
+    display:none
+}
+h5:hover:before {
+    content:"Waz Shaiwayana, Anna Williamson, Ryan Simpkins, Sanders Chhun"
+}
+h5 {
+    text-align: center;
+}
