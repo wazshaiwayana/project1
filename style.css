@@ -9,23 +9,17 @@ header {
     
 }
 
-h2 {text-align : center;
-    border: 20px;
-
-}
-
 p{
     text-align: center;
-    text-align: justify;
     letter-spacing: 3px;
 }
 
-.intro {
+#intro {
         border: 1px solid gray;
         padding: 8px;
+        border: 1px solid black;
       }
       
-
 footer{
     text-align: center;
     border:1px solid grey;
@@ -34,15 +28,35 @@ footer{
 
 #forcast-div {
     margin-left: auto;
+    margin-right:auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom:20px;
 }
 
 #sunset-div{
     margin-left : auto;
+    margin-right: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search {
+    border:1px solid black;
+   
+}
+
+#submit{
+    border: 1px solid black;
+   
 }
 
 #searchDiv{
     margin-left: auto;
+    margin-right:auto;
     
+
 }
 
 h5:hover span {
@@ -54,3 +68,5 @@ h5:hover:before {
 h5 {
     text-align: center;
 }
+
+
