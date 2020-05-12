@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Search for a City!</h2>
+        <form class="form-inline">
+            <div class="form-group mx-sm-6 mb-2">
+                <label for="inputCity" class="input">Search for a City!</label>
+                <input type="text" placeholder="City"><button type="button" class="query_btn btn search btn-primary btn-sm">Search</button><br>
+            </div>            
+        </form>
+        <div class="append-city"></div>
+        
+            <div class="row">
+                <h1 id="city-name"></h1>
+            </div>
+            <div class="row">
+                <h2 id="temperature"></h2>
+            </div>
+            <div class="row">
+                <h2 id="humidity"></h2>
+            </div>
+            <div class="row">
+                <h2 id="wind-speed"></h2>
+            </div>
+            <div class="row">
+                <h2 id="sunset"></h2>
+            </div>
+    </div>
+    <p></p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="test-sunset-time-api.js"></script>
+</body>
+</html>
