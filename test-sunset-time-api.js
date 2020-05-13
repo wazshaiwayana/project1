@@ -27,11 +27,12 @@ function currentWeather() {
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + place + "&appid=" + apiKey,
         method: "GET"
     }).then(function (response) {
-        $("#city-name").text(response.name + " " + moment().month() + "/" + moment().date() + "/" + moment().year());
+        $("#cityName").text(response.name);
+        $("#city-name").text( moment().month() + "/" + moment().date() + "/" + moment().year());
         $("#temperature").text("Temperature: " + ((response.main.temp - 273.15) * 9 / 5 + 32).toFixed(1) + "°F");
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
-        $("#wind-speed").text("Wind Speed: " + response.wind.speed + "MPH");
-        $("#sunset").text("Sunset Time: " + response.sys.sunset)
+        $("#wind-speed").html("Wind Speed: " + "<br/>" +  response.wind.speed + "MPH");
+        $("#sunset").html("Sunset Time: " + "<br/>" + response.sys.sunset)
         var longitude = response.coord.lon;
         var latitude = response.coord.lat;
     });
