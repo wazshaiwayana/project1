@@ -1,26 +1,5 @@
 var apiKey = "457cbbad81bb1f84bf029b7dd8674602";
-var placeInput = "San Diego";
-var place = "San Diego";
-var buttonsReturned = [];
-var buttons = [];
-var i = 0;
-
-$(".append-city").append("<button class='history'>" + place + "</button> <br>")
-
-function appendCityButton() {
-    if (placeInput != "") {
-        place = placeInput;
-        if (buttons.includes(place)) {
-            return;
-        } else {
-            $(".append-city").append("<button class='history'>" + place + "</button> <br>")
-            buttons.push(place);
-            localStorage.setItem("cities", JSON.stringify(buttons));
-        }
-    } else {
-        return;
-    }
-}
+var place = "";
 
 function currentWeather() {
     $.ajax({
@@ -38,27 +17,9 @@ function currentWeather() {
     });
 }
 
-if (localStorage.getItem("cities") !== null) {
-    buttonsReturned = localStorage.getItem("cities");
-    buttons = JSON.parse(buttonsReturned);
-
-    while (i < buttons.length) {
-        $(".append-city").append("<button class='history'>" + buttons[i] + "</button> <br>")
-        i++
-    }
-}
-
 currentWeather();
 
 $(".search-btn").on("click", function () {
-    placeInput = $("#search").val().trim();
-    appendCityButton();
-    currentWeather();
-});
-
-
-$(".history").on("click", function () {
-    placeInput = $(this).text();
-    appendCityButton();
+    place = $("#search").val().trim();
     currentWeather();
 });
