@@ -38,7 +38,7 @@ $(document).ready(function(){
             dataType: "json",
             success: function(data) {
                
-                const imageUrl = data.hits[5].webformatURL;
+                const imageUrl = data.hits[10].webformatURL;
                 console.log(imageUrl);
             
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
             dataType: "json",
             success: function(data) {
                
-                const imageUrl = data.hits[8].webformatURL;
+                const imageUrl = data.hits[9].webformatURL;
                 console.log(imageUrl);
             
 
@@ -70,7 +70,25 @@ $(document).ready(function(){
         });
 
 
+        $.ajax({
+            type: "GET",
+            url: URL,
+            dataType: "json",
+            success: function(data) {
+               
+                const imageUrl = data.hits[13].webformatURL;
+                console.log(imageUrl);
+            
 
+                var image = "<img src= '" + imageUrl + "' />";
+                 $("#images").append(image);
+                
+
+        
+            }
+        });
+
+        
         
 
     })
