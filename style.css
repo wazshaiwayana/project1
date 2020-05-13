@@ -47,7 +47,7 @@ footer{
    
 }
 
-#submit{
+#getCity{
     border: 1px solid black;
    
 }
@@ -55,8 +55,11 @@ footer{
 #searchDiv{
     margin-left: auto;
     margin-right:auto;
-    
+}
 
+img{
+    width: 300px;
+    height: 300px;
 }
 
 h5:hover span {
@@ -68,8 +71,5 @@ h5:hover:before {
 h5 {
     text-align: center;
 }
-
-.h1{testing
-} 
 
 
