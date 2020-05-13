@@ -29,9 +29,9 @@ footer{
 #forcast-div {
     margin-left: auto;
     margin-right:auto;
-    border: 1px solid black;
-    text-align: center;
+    border: 1px solid black;    
     margin-bottom:20px;
+ 
 }
 
 #sunset-div{
@@ -44,14 +44,20 @@ footer{
 
 
 
+
 #search {
     border:1px solid black;
    
 }
 
-#getCity{
+#submit{
+    
     border: 1px solid black;
    
+}
+
+button{
+    border:1px solid black;
 }
 
 #searchDiv{
@@ -65,6 +71,12 @@ img{
     margin-left:25px;
     
 }
+
+
+
+
+
+
 
 h5:hover span {
     display:none
