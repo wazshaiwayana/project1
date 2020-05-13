@@ -26,11 +26,45 @@ footer{
     padding: 8px;
 }
 
+#sunset{
+margin-top: 80px;
+   margin-left: 50px;
+   white-space: nowrap;
+
+}
+
+#temperature {
+    margin-left:50px;
+   
+}
+
+#cityName{
+margin-left:50px;
+    white-space: nowrap;
+    margin-bottom:-1px;
+
+}
+
+#wind-speed{
+        white-space:nowrap;
+}
+.center{
+    margin-left:50px;
+    
+}
+
+.bottom{
+margin-top: 30px;
+
+}
 #forcast-div {
     margin-left: auto;
     margin-right:auto;
     border: 1px solid black;    
     margin-bottom:20px;
+    height:250px;
+    width: 200px;
+    
  
 }
 
@@ -40,6 +74,9 @@ footer{
     border: 1px solid black;
     text-align: center;
     margin-bottom: 20px;
+    justify-content: center;
+    height: 250px;
+    width: 200px;
 }
 
 
