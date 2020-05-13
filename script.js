@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-     $("#getCity").on("click", function(){
+     $("#submit").on("click", function(){
       
 
         var city=$("#search").val();
