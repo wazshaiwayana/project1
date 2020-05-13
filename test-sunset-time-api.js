@@ -49,8 +49,8 @@ if (localStorage.getItem("cities") !== null) {
 
 currentWeather();
 
-$(".search").on("click", function () {
-    placeInput = $(".search-input").val().trim();
+$(".search-btn").on("click", function () {
+    placeInput = $("#search").val().trim();
     appendCityButton();
     currentWeather();
 });
