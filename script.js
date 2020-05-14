@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
      $("#submit").on("click", function(){
+        $("#sunset-div").css("display", "block");
+        $("#forcast-div").css("display", "block");
       
 
         var city=$("#search").val();
