@@ -5,7 +5,8 @@ function currentWeather() {
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + place + "&appid=" + apiKey,
         method: "GET"
-    }).then(function (response) {
+    })
+    .then(function (response) {
         $("#cityName").text(response.name);
         $("#city-name").text( moment().month() + "/" + moment().date() + "/" + moment().year());
         $("#temperature").text("Temperature: " + ((response.main.temp - 273.15) * 9 / 5 + 32).toFixed(1) + "°F");
@@ -22,21 +23,26 @@ function currentWeather() {
 
         var formattedTime = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
         console.log(formattedTime);
-
+        // variable for calling time in the api
         const normalTime = milToStandard(formattedTime);
+
         $("#sunset").html("Sunset Time: " + "<br/>" + normalTime);
         console.log(normalTime);
-        // this is converting sunrise time from unix to regular time,  returned in military time. 
+
+
+        // this is converting sunrise time from unix to regular time 
         let unix_timestamp1 = response.sys.sunrise
         var date = new Date(unix_timestamp1 * 1000);
         console.log(date);
         var hours= date.getHours();
         var minutes= "0" + date.getMinutes();
-        var seconds = "0" + date.getSeconds();
+        //var seconds = "0" + date.getSeconds();
+        // took out the seconds above ^ because we don't need it for the sunrise 
         
-        var formattedTime1 = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
+        var formattedTime1 = hours + ":" + minutes.substr(-2);
         console.log(formattedTime1);
-        $("#sunrise").html("Sunrise Time: " + "<br/>" + formattedTime1);       
+        $("#sunrise").html("Sunrise Time: " + "<br/>" + formattedTime1 + " AM");      
+
     });
 }
 
@@ -48,8 +54,7 @@ $(".search-btn").on("click", function () {
 });
 
 
-
-
+// converting time from military to regular 
 function milToStandard(value) {
   if (value !== null && value !== undefined){ 
     if(value.indexOf('AM') > -1 || value.indexOf('PM') > -1){ 
