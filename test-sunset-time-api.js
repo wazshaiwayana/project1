@@ -24,13 +24,19 @@ function currentWeather() {
         console.log(formattedTime);
 
         const normalTime = milToStandard(formattedTime);
-        // moved the call for it here in order for it to work. 
         $("#sunset").html("Sunset Time: " + "<br/>" + normalTime);
         console.log(normalTime);
-        //I think this goes here?????//
-        $("#sunrise").html("Sunrise Time: " + "<br/>" + "");
-               
-       
+        // this is converting sunrise time from unix to regular time,  returned in military time. 
+        let unix_timestamp1 = response.sys.sunrise
+        var date = new Date(unix_timestamp1 * 1000);
+        console.log(date);
+        var hours= date.getHours();
+        var minutes= "0" + date.getMinutes();
+        var seconds = "0" + date.getSeconds();
+        
+        var formattedTime1 = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
+        console.log(formattedTime1);
+        $("#sunrise").html("Sunrise Time: " + "<br/>" + formattedTime1);       
     });
 }
 
