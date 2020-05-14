@@ -50,9 +50,7 @@ $(".search-btn").on("click", function () {
     currentWeather();
 });
  
- 
- 
- 
+
 function milToStandard(value) {
   if (value !== null && value !== undefined){ 
     if(value.indexOf('AM') > -1 || value.indexOf('PM') > -1){ 
