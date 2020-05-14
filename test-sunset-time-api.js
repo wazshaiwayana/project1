@@ -27,16 +27,10 @@ function currentWeather() {
         // moved the call for it here in order for it to work. 
         $("#sunset").html("Sunset Time: " + "<br/>" + normalTime);
         console.log(normalTime);
-
-
+        //I think this goes here?????//
+        $("#sunrise").html("Sunrise Time: " + "<br/>" + "");
+               
        
-       
-        // I commented this line out because it didnt seem like we need it in the code. it didnt make a difference with your other calls 
-        
-        // var longitude = response.coord.lon;
-        // var latitude = response.coord.lat;
-
-
     });
 }
 
