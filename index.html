@@ -14,63 +14,51 @@
     <h1>Travoogle</h1>
   </header>
 
-<div class ="container">
+  <div class ="container">
     <p id= "intro">Welcome to Travoogle! Your one stop search engine for the pictures and current weather of places you want to visit! Your search will also include the sunrise and sunset times for all of you romantic types!</p>
    
     <br>
-  <div class = "row" id="searchDiv">
+    <div class = "row" id="searchDiv">
       <div class="col-md-4 box"> 
         <div class="card">  
             <input type="text" id="search"class="form-control" placeholder="Travel to.....">
             <button id="submit" class="btn search-btn btn-warning">Search</button>
         </div>
-        <div class="append-city"></div>
       </div>
 
      <div id="sunset-div">
-        <div class="col-md-4 "> 
-          
-            <h6  id="sunrise"></h6>
 
-            <h6  id="sunset"></h6>
+        <div class="top col-md-4 "> 
+          <h6  id="sunrise"></h6>
+          <h6  id="sunset"></h6> 
+          <h6 id="icon"><img id="wicon" src="" alt="Weather icon"></h6>
 
-            <h6 id="icon"><img id="wicon" src="" alt="Weather icon"></h6>
-          
-        </div>
      </div>
 
       <div id="forcast-div">
         <div class="bottom col-md-4">
-          
             <h6 id="cityName"></h6>
             <h6 class ="center" id="city-name"></h6>
-        
-          
             <h6 class="class" id="temperature"></h6>
-         
-       
             <h6 class="center" id="humidity"></h6>
-        
-         
-            <h6 class="center" id="wind-speed"></h6>
-              
+            <h6 class="center" id="wind-speed"></h6>  
         </div>
       </div>
-
 
       <div class="row">
         <div class="column">
           <div id="images"></div>
-       </div> 
-     </div>
+        </div> 
+      </div>
+    </div>
+  </div> 
 
-  </div>
-</div> 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src= "test-sunset-time-api.js"></script>
+  <script src="script.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src= "test-sunset-time-api.js"></script>
-<script src="script.js"></script>
+  
 </body>
 
 <footer>
